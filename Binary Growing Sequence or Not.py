@@ -59,3 +59,18 @@ Input:
 Output:
 NO
 """
+def growing(a,b):
+    while a>0:
+        if not(b&1==1 or (a&1)^(b&1)==0):
+            return False
+        a=a>>1
+        b=b>>1
+    return True
+n=int(input())
+l=list(map(int,input().split()))
+for i in range(1,n):
+    if not growing(l[i-1],l[i]):
+        print("NO")
+        break
+else:
+    print("YES")
