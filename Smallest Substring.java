@@ -57,6 +57,7 @@ public class Hello {
 		            start+=1;
 		        }
 		        min=i-start+1;
+			ind=start;
 		        break;
 		    }
 		}
