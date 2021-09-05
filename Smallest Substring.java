@@ -49,16 +49,17 @@ public class Hello {
 		for(int i=0;i<l;i++){
 		    char ch=s.charAt(i);
 		    hm.put(ch,hm.getOrDefault(ch,0)+1);
-		    if (hm.get(ch)==1)
+		    if (hm.get(ch)==1){
 		        count+=1;
-		    if(count==dist){
-		        while(hm.get(s.charAt(start))>1){
-		            hm.replace(s.charAt(start),hm.get(s.charAt(start))-1);
-		            start+=1;
-		        }
-		        min=i-start+1;
-			ind=start;
-		        break;
+			if(count==dist){
+				while(hm.get(s.charAt(start))>1){
+				    hm.replace(s.charAt(start),hm.get(s.charAt(start))-1);
+				    start+=1;
+				}
+				min=i-start+1;
+				ind=start;
+				break;
+			}
 		    }
 		}
 		System.out.print(s.substring(ind,ind+min));
