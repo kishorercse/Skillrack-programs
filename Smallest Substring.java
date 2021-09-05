@@ -56,11 +56,7 @@ public class Hello {
 		            hm.replace(s.charAt(start),hm.get(s.charAt(start))-1);
 		            start+=1;
 		        }
-		        int t=i-start+1;
-		        if (t<min){
-		            min=t;
-		            ind=start;
-		        }
+		        min=i-start+1;
 		        break;
 		    }
 		}
