@@ -32,7 +32,7 @@ for i in s:
     if i==' ':
         if t:
             print(t,end=' ')
-        t=''
+            t=''
         flag=True
     elif i==',':
         flag=False
