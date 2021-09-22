@@ -1,4 +1,13 @@
 """
+The capacity of 3 vehicles are passed as the input. The program must print the number of passengers who can
+travel in such a way that the occupied vehicles are filled to their capacity. The output containing the number
+of passengers must be sorted.
+
+Boundary Condition(s):
+1 <= Capacity of each vehicle <= 100
+
+Input Format:
+The first line contains the capacity of 3 vehicles separated by a space.
 Output Format: 
 The first line contains the integer values representing the number of passengers. 
 
