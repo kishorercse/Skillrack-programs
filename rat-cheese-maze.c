@@ -48,6 +48,7 @@ Input:
 Output:
 0
 */
+#include <stdio.h>
 int check(int maze[8][8],int i,int j)
 {
     if (maze[i][j]==9)
@@ -73,8 +74,8 @@ int main(){
   int maze[8][8];
   for(int i=0;i<8;i++){
     for(int j=0;j<8;j++){
-      scanf("%d",maze[i][j]);
+      scanf("%d",&maze[i][j]);
     }
   }
-  isPath(maze);
+  printf("%d",isPath(maze));
 }
