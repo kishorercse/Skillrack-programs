@@ -1,4 +1,16 @@
 """
+The program must accept an integer matrix of size N*N containing only 0s and 1s as the input. The program must find
+the value of X where X represents the position of a row and column in the marix which contains 0s in the Xth row and
+1s in the Xth column, expect the cell (X,X). Then the program must print the value of X as the output. If there is no 
+such row and column, then the program must print -1 as the output.
+
+Boundary Condition(s):
+2 <= N <=50
+
+Input Format:
+The first line contains N.
+The next N lines contain an integer matrix of size N*N.
+
 Output Format: 
 The first line contains the value of X or the first line contains -1. 
 
