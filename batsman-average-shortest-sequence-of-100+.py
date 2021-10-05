@@ -42,3 +42,20 @@ Input:
 Output:
 100.50
 """
+n=int(input())
+mn=n+1
+l=list(map(int,input().split()))
+count=0
+end=-1
+for i in range(n):
+    if l[i]>=100:
+        count+=1
+    else:
+        if count>0 and count<=mn:
+            end=i
+            mn=count
+        count=0
+if count>0 and count<=mn:
+    end=n
+    mn=count
+print("%.2f"%(sum(l[end-mn:end])/mn))
