@@ -6,7 +6,33 @@ Boundary Condition(s):
 3 <= Length of S <= 100
 
 Input Format: 
-The first line contains S. Output Format: The lines containing the desired pattern as shown in the Example Input/Output section. Example Input/Output 1: Input: Tenth Output: *e*** ****h **n** T**t* Example Input/Output 2: Input: SkillRack Output: ******a** *******c* **i****** *k******k ***ll**** *****R*** S********
+The first line contains S. 
+
+Output Format: 
+The lines containing the desired pattern as shown in the Example Input/Output section. 
+
+Example Input/Output 1: 
+Input:
+Tenth
+
+Output: 
+*e*** 
+****h
+**n** 
+T**t*
+
+Example Input/Output 2:
+Input:
+SkillRack
+
+Output:
+******a**
+*******c*
+**i******
+*k******k
+***ll****
+*****R*** 
+S********
 """
 s=input().strip()
 a=sorted(set(s.lower()))
