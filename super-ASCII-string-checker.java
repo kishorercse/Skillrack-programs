@@ -27,9 +27,6 @@ Explanation:
 In the first string “abcbcc“,
 The count of the alphabet ‘a’ is 1. The super ASCII value of ‘a’ is also 1.
 The count of the alphabet ‘b’ is 2. The super ASCII value of ‘b’ is also 2.
-
- 
-
 The count of the alphabet ‘c’ is 3. The super ASCII value of ‘c’ is also 3.
 Here the string “abcbcc” is a super ASCII string. So Yes is printed.
 In the second string “dcddd“,
