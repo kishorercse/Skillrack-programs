@@ -52,3 +52,22 @@ eykan -> 3rd substring of S.
 donke -> 1st substring of S. 
 garoo -> 4th substring of S.
 """
+s=input().strip()
+a=[]
+b=[]
+ln=0
+while True:
+    try:
+        t=input().strip()
+        x=s.index(t)
+        a.append(t)
+        b.append([t,x])
+        ln+=1
+    except EOFError:
+        break
+b.sort(key=lambda x:x[1])
+for i in a:
+    for j in range(ln):
+        if b[j][0]==i:
+            print(j+1)
+            break
