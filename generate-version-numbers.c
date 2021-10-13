@@ -1,4 +1,18 @@
 /*
+The program must accept two characters ch1, ch2 and two integers X, Y as the input. The characters ch1
+and ch2 represent a range of alphabets. The integers X and Y represent a range of integers. The program
+must generate the version numbers based on the following conditions.
+- The version number must have three parts separated by a dot (part1.part2.part3)
+- The part1 must be formed using the combination of an alphabet and an integer.
+- The part2 must be formed using only the alphabet.
+- The part3 must be formed using only the integer.
+The program must print all possible version numbers that can be formed using the given alphabet range
+and integer range in sorted order.
+
+Boundary Condition(s):
+1 <= X, Y <= 20
+
+Input Format:
 The first line contains ch1 and ch2. 
 The second line contains X and Y.
 
