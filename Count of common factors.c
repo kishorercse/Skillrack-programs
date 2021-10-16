@@ -7,18 +7,22 @@ Input:
 2
 100
 75
+
 Output:
 2
 
-Example 2:
+Explanation: The common factors excluding 1 are 5,25. Hence output is 2.
 
+Example 2:
 Input:
 3
 10
 20
 30
+
 Output:
 3
+
 Explanation:
 The common factors are excluding 1 are 2,5,10. Hence output is 3.
 */
