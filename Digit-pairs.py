@@ -45,7 +45,7 @@ Input:
 Output: 
 7
 """
-def bit(n):
+def bit(n):  
     return (11*int(max(n))+7*int(min(n)))%100
 n=int(input())
 l=input().split()
@@ -53,18 +53,16 @@ odd={}
 even={}
 for i in range(n):
     l[i]=bit(l[i])//10
-    if i%2==0:
+    if i%2==0:      
         odd[l[i]]=odd.get(l[i],0)+1
-    else:
+    else:  
         even[l[i]]=even.get(l[i],0)+1
-d={}
-for i in odd:
-    if odd[i]>1:
-        d[i]=d.get(i,0)+odd[i]//2+odd[i]%2
-for i in even:
-    if even[i]>1:
-        d[i]=d.get(i,0)+even[i]//2+even[i]%2
 count=0
-for i in d:
-    count+=min(2,d[i])
+for i in range(10):
+    x=0
+    if even.get(i,0)>1:
+        x+=even[i]//2+even[i]%2
+    if odd.get(i,0)>1:
+        x+=odd[i]//2+odd[i]%2
+    count+=min(2,x)
 print(count)
