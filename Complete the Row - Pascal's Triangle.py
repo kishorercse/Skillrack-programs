@@ -47,11 +47,12 @@ Explanation:
 The given 2 integers represent the 4th row of Pascal's triangle. Hence the complete 4th row is printed as the output.
 1 3 3 1
 """
-int(input())
-row=int(input().split()[1])
-prev=1
-print(1,end=' ')
-for i in range(1,row+1):
+n=int(input())
+l=list(map(int,input().split()))
+row=l[1]
+print(*l,end=' ')
+prev=l[-1]
+for i in range(n,row+1):
     curr=(prev * (row-i+1))//i
     prev=curr
     print(curr,end=' ')
