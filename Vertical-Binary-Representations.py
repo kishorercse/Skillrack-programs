@@ -44,3 +44,14 @@ Output:
 0010101010 
 10
 """
+n=int(input())
+l=['']*len(bin(n)[2:])
+while n>0:
+    t=bin(n)[2:]
+    x=0
+    for i in t:
+        l[x]+=i
+        x+=1
+    n-=1
+for i in l:
+    print(i)
