@@ -50,3 +50,15 @@ Output:
 *SkillRa**Skill**Ski**S 
 SkillRackSkillRaSkillSkiS
 """
+s=input().strip()
+l=len(s)
+t=(l+1)//2
+p=t-1
+for i in range(t):
+    p=t-1-i
+    for j in range((i+1)*2-1,0,-2):
+        print('*'*p,end='')
+        print(s[:j],end='')
+        if j!=1:
+            print('*'*p,end='')
+    print()
