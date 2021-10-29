@@ -48,19 +48,21 @@ Output:
 3
 """
 m,n=map(int,input().split())
-mat=[input().split() for _ in range(m)]
+a=[list(map(int,input().split())) for i in range(m)]
 count=0
 for i in range(m-n+1):
     for j in range(m-n+1):
+        t=a[i][j]
         f=True
-        for ii in range(i,i+n):
-            for jj in range(j,j+n):
-                if ii==i or jj==j or ii==i+n-1 or jj==j+n-1:
-                    if mat[ii][jj]!=mat[i][j]:
-                        f=False
-                        break
-            if not f:
+        for k in range(j,j+n):
+            if a[i][k]!=t or a[i+n-1][k]!=t:
+                f=False
                 break
         if f:
-            count+=1
+            for k in range(i,i+n):
+                if a[k][j]!=t or a[k][j+n-1]!=t:
+                    f=False
+                    break
+            if f:
+                count+=1
 print(count)
