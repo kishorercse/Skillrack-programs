@@ -53,49 +53,47 @@ Output:
 #include<stdio.h>
 #include<stdlib.h>
 
-int isVowel(char ch)
-{
-    ch=tolower(ch);
+int isVowel(char ch){ 
+    ch=tolower(ch);  
     return ch=='a' || ch=='e' || ch=='i' || ch=='o' || ch=='u';
 }
-int main()
-{
-    int r,c;
-    scanf("%d %d\n",&r,&c);
-    int row[r], col[c];
-    char m[r][c];
-    memset(row, 0, r*sizeof(int));
-    memset(col, 0, c*sizeof(int));
-    for(int i=0;i<r;i++)
+
+int main(){   
+    int r,c;  
+    scanf("%d %d\n",&r,&c);   
+    int row[r], col[c];   
+    char m[r][c]; 
+    memset(row, 0, r*sizeof(int)); 
+    memset(col, 0, c*sizeof(int)); 
+    for(int i=0;i<r;i++)    
     {
-        for(int j=0;j<c;j++)
+        for(int j=0;j<c;j++)        
         {
-            scanf("%c ",&m[i][j]);
-            if (isVowel(m[i][j])){
+            scanf("%c ",&m[i][j]); 
+            if (isVowel(m[i][j]))
+            {
                 m[i][j]='*';
-                row[i]++;
-                col[j]++;
+                row[i]++;  
+                col[j]++; 
             }
         }
     }
-    int w=0;
-    for(int i=0;i<r;i++)
-    {
-        int flag=0;
-        for(int j=0;j<c;j++)
+    int printed=0; 
+    for(int i=0;i<r;i++)    
+    { 
+        if (row[i]!=c)
         {
-            if (row[i]!=c && col[j]!=r)
-            {
-                flag=1;
-                printf("%c ",m[i][j]);
-            }
-        }
-        if (flag==1){
-            w=1;
+            for(int j=0;j<c;j++)    
+            {   
+                if (col[j]!=r)
+                {  
+                    printf("%c ",m[i][j]); 
+                    printed=1;
+                }
+            } 
             printf("\n");
         }
-    }
-    if (w==0)
+    }    
+    if (printed==0) 
         printf("-1");
-
 }
