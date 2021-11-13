@@ -35,7 +35,8 @@ Input:
 5
 105 840 550 115 841 
 
-Output: -1
+Output:
+-1
 """
 n=int(input())
 l=input().split()
