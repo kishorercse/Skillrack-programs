@@ -56,3 +56,17 @@ DOMAINS
 ***b***
 CHECKUP
 """
+s=input().strip()
+n=int(input())
+l=[input().strip() for _ in range(n)]
+t=len(l[0])//2
+x='*'*t
+for i in s:
+    ch=i.lower()
+    for j in range(n):
+        if l[j]!=-1 and l[j][t].lower()==ch:
+            print(l[j])
+            l[j]=-1
+            break
+    else:
+        print(x,i,x,sep='')
