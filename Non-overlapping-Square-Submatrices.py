@@ -98,10 +98,8 @@ m=[input().split() for _ in range(r)]
 n=2
 minimum=min(r,c)
 while n<=minimum:
-    for i in range(0,r,n):
-        if i+n<=r:
-            for j in range(0,c,n):
-                if j+n<=c:
-                    for ii in range(i,i+n):
-                        print(*m[ii][j:j+n])
+    for i in range(0,r-n+1,n):
+        for j in range(0,c-n+1,n):
+            for ii in range(i,i+n):
+                print(*m[ii][j:j+n])
     n+=1
