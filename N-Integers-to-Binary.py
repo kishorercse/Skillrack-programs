@@ -38,3 +38,13 @@ Input:
 Output:
 5
 """
+n=int(input())
+l=list(map(int,input().split()))
+s=''
+for i in range(n):
+    b=bin(l[i])[2:]
+    try:
+        s=b[-i-1]+s
+    except IndexError:
+        s='0'+s
+print(int(s,2))
