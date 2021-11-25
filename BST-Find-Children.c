@@ -1,5 +1,6 @@
-"""
-The program must accept N integers. The first value is considered as the root of the Binary Search Tree (BST) to be formed. The program must print the children(left and right) of the given node K in the BST. If the given node does not have a child, then the program must print the string value "LEAF" as the output.
+/*
+The program must accept N integers. The first value is considered as the root of the Binary Search Tree (BST) to be formed. The program must print the children(left and right)
+of the given node K in the BST. If the given node does not have a child, then the program must print the string value "LEAF" as the output.
 
 Boundary Condition(s):
 1 <= N <= 100
@@ -49,7 +50,7 @@ Input:
 
 Output:
 20
-"""
+*/
 #include<stdio.h>
 #include<stdlib.h>
 struct node
