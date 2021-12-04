@@ -36,7 +36,8 @@ Input:
 Output:
 No
 """
-if int(input(),2)%4==0:
+n=input().strip()[-2:]
+if n=='00':
     print("Yes")
 else:
     print("No")
