@@ -47,3 +47,15 @@ Output:
 --------------***-----
 -----**---------------
 ----*-----------------
+"""
+s=list(map(int,input().strip()))
+l=len(s)
+mx=max(s)
+x=0
+tot=sum(s)
+m=[list('-'*tot) for i in range(mx)]
+for i in range(l):
+    m[s[i]-1][x:x+s[i]]=list('*'*s[i])
+    x+=s[i]
+for i in m[::-1]:
+    print(*i,sep='')
