@@ -48,3 +48,40 @@ Input:
 Output:
 01:50:47
 */
+#include <stdio.h>
+#include <stdlib.h>
+
+struct Time
+{
+    int hours;
+    int minutes;
+    int seconds;
+};
+void updateTime(struct Time *time, char *str)
+{
+    int len=strlen(str)-1;
+    char ch=tolower(str[len]);
+    int x;
+    sscanf(str,"%d",&x);
+    if (ch=='s')
+        time->seconds+=x;
+    else if(ch=='m')
+        time->minutes+=x;
+    else
+        time->hours+=x;
+    time->minutes+=time->seconds/60;
+    time->seconds%=60;
+    time->hours+=time->minutes/60;
+    time->minutes%=60;
+    time->hours%=24;
+}
+int main()
+{
+    char str[11];
+    struct Time time;
+    scanf("%d:%d:%d\n", &time.hours, &time.minutes, &time.seconds);
+    scanf("%s", str);
+    updateTime(&time, str);
+    printf("%02d:%02d:%02d", time.hours, time.minutes, time.seconds);
+    return 0;
+}
