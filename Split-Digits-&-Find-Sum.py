@@ -49,3 +49,25 @@ Explanation:
 (-6) -> 572112
 12+44-572112 = -572056.
 """
+a=input().strip()
+b=input().strip()
+total=0
+flag=False
+t=''
+for i in b:
+    if i==')':
+        flag=False
+        t=int(t)
+        if t<0:
+            t=-t
+            total-=int(a[:t])
+        else:
+            total+=int(a[:t])
+        a=a[t:]
+        t=''
+    else:
+        if flag:
+            t+=i
+        if i=='(':
+            flag=True
+print(total)
