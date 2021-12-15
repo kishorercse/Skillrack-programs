@@ -43,5 +43,6 @@ s=sorted(d)
 size=len(s)
 mx=d[s[0]]
 for i in range(1,size):
-    mx=max(mx,d[s[i-1]]+d[s[i]])
+    if (s[i]-s[i-1]<=1):
+        mx=max(mx,d[s[i-1]]+d[s[i]])
 print(mx)
