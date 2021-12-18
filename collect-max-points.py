@@ -1,9 +1,11 @@
-"""A kids game has a board with an M*N matrix having M rows and N columns containing non-negative integer values as cell values. The kid can start from the first column of any row and can perform the following three navigations after collecting the points in that cell.
+"""A kids game has a board with an M*N matrix having M rows and N columns containing non-negative integer values as cell values. The kid can start from the first column of any 
+row and can perform the following three navigations after collecting the points in that cell.
 – He can move to the right cell.
 – He can move to the top right cell.
 – He can move to the bottom right cell.
 
-The kid cannot come back to a previous column. He navigates until he reaches the last column of the matrix and collects the points in each cell. The program must print the maximum points a kid can collect for the given matrix while navigating.
+The kid cannot come back to a previous column. He navigates until he reaches the last column of the matrix and collects the points in each cell. The program must print the 
+maximum points a kid can collect for the given matrix while navigating.
 
 Input Format:
 The first line will contain the value of M and N separated by a space.
