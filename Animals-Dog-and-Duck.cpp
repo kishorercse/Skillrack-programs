@@ -7,6 +7,9 @@ Bark
 Duck
 Quack
 */
+
+#include <iostream>
+using namespace std;
 class Animal
 {
     public:
@@ -39,3 +42,14 @@ class Duck:public Animal
         cout << "Quack" << endl;
     }
 };
+
+int main()
+{
+    Animal *animal1 = new Dog();
+    animal1->printAnimalName();
+    animal1->printAnimalSound();
+    Animal *animal2 = new Duck();
+    animal2->printAnimalName();
+    animal2->printAnimalSound();
+    return 0;
+} // End of main function
