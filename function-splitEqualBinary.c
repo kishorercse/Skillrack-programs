@@ -35,3 +35,46 @@ Input:
 Output:
 8
 */
+#include <stdio.h>
+#include <stdlib.h>
+char s[301];
+int ind=0;
+void binary(int N)
+{
+    if(N==0)
+        return;
+    binary(N/2);
+    s[ind++]=N%2+'0';
+}
+
+
+int splitEqualBinary(int N)
+{
+    int x;
+    binary(N);
+    char p[15], q[15], k=0;
+    int a=0, b=ind/2;
+    while(b<ind)
+    {
+        p[k]=s[a];
+        q[k]=s[b];
+        k++;
+        if (s[a++]!=s[b++])
+            return N;
+    }
+    int t=ind/2;
+    while(t>0)
+    {
+        t--;
+        N>>=1;
+    }
+    return 2*N;
+
+}
+int main()
+{
+    int N;
+    scanf("%d", &N);
+    printf("%d", splitEqualBinary(N));
+    return 0;
+}
