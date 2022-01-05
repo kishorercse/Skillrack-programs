@@ -28,3 +28,9 @@ Output:
 Bhuvana
 Pavithra
 """
+n=int(input())
+dt={}
+for _ in range(n):
+    s,d=input().split()
+    dt[d]=dt.get(d,[])+[s]
+print(*dt[input().strip()],sep='\n')
