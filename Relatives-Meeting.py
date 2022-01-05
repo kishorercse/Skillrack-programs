@@ -33,3 +33,40 @@ Explanation:
 55, 35, 22 form another relative group.
 So the count of relatives for the person with identifier 40 is 4.
 """
+n=int(input())
+gtp={}
+ptg={}
+g=1
+for _ in range(n):
+    a,b=map(int,input().split())
+    x,y=ptg.get(a,-1),ptg.get(b,-1)
+    if x!=-1 and y!=-1 and x==y:
+        continue
+    if x!=-1 and y!=-1:
+        p,q=max(x,y),min(x,y)
+        gtp[q][0]=gtp[q][0].union(gtp[p][0])
+        gtp[q][1]+=gtp[p][1]
+        for i  in gtp[p][0]:
+            ptg[i]=q
+            ptg[i]=q
+        del gtp[p]
+    elif x!=-1 or y!=-1:
+        t=x
+        if x==-1:
+            t=y
+        gtp[t][0].add(a)
+        gtp[t][0].add(b)
+        gtp[t][1]+=1
+        ptg[a]=t
+        ptg[b]=t
+    else:
+        if a==b:
+            t=1
+        else:
+            t=2
+        gtp[g]=[set([a,b]),t]
+        ptg[a]=g
+        ptg[b]=g
+        g+=1
+ident=int(input().strip())
+print(gtp[ptg[ident]][1])
