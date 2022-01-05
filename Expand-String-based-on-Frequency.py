@@ -37,3 +37,20 @@ x5y2z1x6y3z6
 Output:
 xxxxxyyzxyzzzzz
 """
+s=input().strip()
+l=len(s)
+ch=s[0]
+d={}
+i=1
+n=''
+while i<l:
+    if s[i].isalpha():
+        n=int(n)-d.get(ch,0)
+        print(ch*n,end='')
+        d[ch]=d.get(ch,0)+n
+        ch=s[i]
+        n=''
+    else:
+        n+=s[i]
+    i+=1
+print(ch*(int(n)-d.get(ch,0)))
