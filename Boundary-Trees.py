@@ -32,3 +32,14 @@ Output:
 13 11 13
 14 15 15
 """
+r,c=map(int,input().split())
+mat=[list(map(int,input().split())) for _ in range(r)]
+n,m=map(int,input().split())
+growth=n*m
+for i in range(r):
+    for j in range(c):
+        if i==0 or j==0 or i==r-1 or j==c-1:
+            print(mat[i][j]+2*growth,end=' ')
+        else:
+            print(mat[i][j]+growth,end=' ')
+    print()
