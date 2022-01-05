@@ -40,3 +40,42 @@ Input:
 Output:
 10
 """
+n=int(input())
+m=[input().split() for _ in range(n)]
+pairs=0
+for i in range(n):
+    a,b=0,i
+    count=0
+    while a<n and b<n:
+        if m[a][b]=='1':
+            count+=1
+        a+=1
+        b+=1
+    pairs+=count*(count-1)//2
+    if i!=0:
+        a,b=i,0
+        count=0
+        while a<n and b<n:
+            if m[a][b]=='1':
+                count+=1
+            a+=1
+            b+=1
+        pairs+=count*(count-1)//2
+    a,b=0,i
+    count=0
+    while a<n and b>=0:
+        if m[a][b]=='1':
+            count+=1
+        a+=1
+        b-=1
+    pairs+=count*(count-1)//2
+    if i!=0:
+        a,b=n-1,i
+        count=0
+        while a>=0 and b<n:
+            if m[a][b]=='1':
+                count+=1
+            b+=1
+            a-=1
+        pairs+=count*(count-1)//2
+print(pairs)
