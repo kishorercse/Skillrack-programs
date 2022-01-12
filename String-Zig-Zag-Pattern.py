@@ -39,3 +39,16 @@ RE
 YD
 YA
 """
+s=input().strip()
+n=int(input())
+l=len(s)
+if l%n!=0:
+    s+='*'*(n-l%n)
+    l+=n-l%n
+f=True
+for i in range(0,l,n):
+    if f:
+        print(s[i:i+n])
+    else:
+        print(s[i+n-1:i-1:-1])
+    f=not f
