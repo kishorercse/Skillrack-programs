@@ -1,0 +1,42 @@
+"""
+N words are passed as input to the program. For N-1 words there will be another word which starts with it's last letter. The remaining one word (which does not have any other 
+word starting with it's last letter must appear as the last word in the list). The program must print the words in the order so that a specific word is followed by the other 
+word which starts with it's last letter.
+
+Input Format:
+The first line contains N.
+Next N lines contain N words.
+
+Output Format:
+N lines containing N words in the desired order.
+
+Boundary Conditions:
+2 <= N <= 100
+
+Example Input/Output 1:
+Input:
+4
+niche
+manager
+lemon
+emblem
+
+Output:
+lemon
+niche
+emblem
+manager
+"""
+n=int(input())
+l=[input().strip() for _ in range(n)]
+for i in range(n):
+    if all(l[i][-1]!=l[j][0] for j in range(n) if i!=j):
+        res=[l[i]]
+        l[i],l[-1]=l[-1],l[i]
+        break
+for i in range(n-1,0,-1):
+    for j in range(i-1,-1,-1):
+        if l[i][0]==l[j][-1]:
+            l[i-1],l[j]=l[j],l[i-1]
+            break
+print(*l,sep='\n')
