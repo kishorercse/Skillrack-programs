@@ -46,21 +46,25 @@ Output:
 
 int main()
 {
-    int n,k;
+    int n,k,sum=0;
     scanf("%d",&n);
     int arr[n];
     for(int i=0;i<n;i++)
         scanf("%d",&arr[i]);
     scanf("%d",&k);
     k%=n;
-    int i=k,sum=0;
-    for(int ctr=1;ctr<=n;ctr++){
+    int i=k;
+    for(int ctr=1;ctr<=n;ctr++)
+    {
         sum+=arr[i];
         i=(i+1)%n;
-        if (ctr%3==0 || ctr==n){
+        if (ctr%3==0)
+        {
             printf("%d ",sum);
             sum=0;
         }
     }
+    if (n%3!=0)
+        printf("%d",sum);
 
 }
