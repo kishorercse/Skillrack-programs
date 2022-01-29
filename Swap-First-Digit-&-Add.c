@@ -1,6 +1,6 @@
 /*
-
-The program must accept two integers X and Y as the input. The program must swap the first digit in X and Y. Then the program must print the sum of the modified values of X and Y as the output.
+The program must accept two integers X and Y as the input. The program must swap the first digit in X and Y. Then the program must print the sum of the modified values of X and
+Y as the output.
 
 Boundary Condition(s):
 1 <= X, Y <= 10^8
