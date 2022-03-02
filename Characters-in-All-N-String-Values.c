@@ -67,7 +67,7 @@ int main()
             }
         }
     }
-    for(int index=0;index<128;index++)
+    for(int index=1;index<128;index++)
     {
         if (count[index]==N)
         {
