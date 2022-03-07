@@ -63,9 +63,7 @@ public class Hello {
                 edges++;
                 cycleIndex=arr[cycleIndex];
             }
-            if (edges>0) {
-                swaps+=(edges-1);
-            }
+            swaps+=(edges-1);
             
         }
         System.out.print(swaps);
