@@ -1,0 +1,15 @@
+r,c=map(int,input().split())
+m=[list(map(int,input().split())) for _ in range(r)]
+d=[[-1,-1],[-1,0],[-1,1],[0,1],[1,1],[1,0],[1,-1],[0,-1]]
+for i in range(r):
+    for j in range(c):
+        s=co=0
+        for x,y in d:
+            sr,sc=i+x,j+y
+            if 0<=sr<r and 0<=sc<c:
+                s+=m[sr][sc]
+                co+=1
+                if (co==m[i][j]):
+                    break
+        print(s,end=' ')
+    print()
